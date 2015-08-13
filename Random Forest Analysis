@@ -1,0 +1,16 @@
+A Random Forest analysis in R
+
+0 XP
+For a Random Forest analysis in R you make use of the randomForest() function in the randomForest package. You call the function in a similar way as rpart():
+First your provide the formula. There is no argument class here to inform the function you're dealing with predicting a categorical variable, so you need to turn Survived into a factor with two levels: as.factor(Survived) ~ Pclass + Sex + Age
+The data argument takes the train data frame.
+When you put the importance argument to TRUE you can inspect variable importance.
+The ntree argument specifies the number of trees to grow. Limit these when having only limited computational power at your disposal.
+To end, since Random Forest uses randomization, you set a seed like this set.seed(111) to assure reproducibility of your results. Once the model is constructed, you can use the prediction function predict().
+Instructions
+
+Perform a Random Forest and name the model my_forest. Use the variables Passenger Class, Sex, Age, Number of Siblings/Spouses Aboard, Number of Parents/Children Aboard, Passenger Fare, Port of Embarkation, and Title (in this order).
+Set the number of trees to grow to 1000 and make sure you can inspect variable importance.
+Make a prediction (my_prediction) on the test set using the predict() function.
+Create a data frame my_solution that contains the solution in line with the Kaggle standards.
+Turn your solution into a csv file with the name my_solution.csv.
