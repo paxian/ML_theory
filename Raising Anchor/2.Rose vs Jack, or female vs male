@@ -1,0 +1,20 @@
+ROSE VS JACK, OR FEMALE VS MALE
+====================================
+
+How many people in your training set survived the disaster with the Titanic? To see this, you can use the table() command in combination with the $-operator to select a single column of a data frame:
+# absolute numbers
+table(train$Survived)
+# percentages
+prop.table(table(train$Survived))
+Run these commands in the console, and see that 549 individuals died (62%) and 342 survived (38%). So one possible prediction heuristic would be "majority wins", resulting in "everybody dies" here.
+In general, the table() command can help you to explore what variables have predictive value. For example, maybe gender could play a role as well to get your seat on the lifeboat? You can explore this using the table() function for a two-way comparison on the number of males and females that survived:
+table(<data_variable_1>, <data_variable_2>)
+If you want to calculate proportions, by wrapping a prop.table() function around table() as before, you'll need to specify whether you want row-wise or column-wise proportions:
+# row-wise proportions
+prop.table(table(<var_1>, <var_2>),1)
+# column-wise proportions
+prop.table(table(<var_1>, <var_2>),2)
+Instructions
+
+Calculate the survival rates in absolute numbers and proportions using table() and prop.table() on the train data frame.
+Next, do a two-way comparison on the number of males and females that survived (both in absolute numbers and in row-wise proportions).
