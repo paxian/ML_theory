@@ -1,0 +1,12 @@
+SET SAIL
+
+When the Titanic sank, 1502 of the 2224 passengers and crew got killed. One of the main reasons for this high level of casualties was the lack of lifeboats on this self-proclaimed "unsinkable" ship.
+Those that have seen the movie know that some individuals were more likely to survive the sinking (lucky Rose) than others (poor Jack). In this course you will learn how to apply machine learning techniques to predict a passenger's chance of surviving using R.
+Let's start with loading in the training and testing set into your R environment. You will use the training set to build your model, and the test set to validate it. To load in online spreadsheet data in R you make use of a combination of the read.csv() and url() functions:
+read.csv(url("<link>"))
+training set: http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/train.csv
+test set: http://s3.amazonaws.com/assets.datacamp.com/course/Kaggle/test.csv
+Instructions
+
+Load the training set and test set, and assign these to two variables named train and test.
+Have a look at the training set and testing by running print(train) and print(test).
